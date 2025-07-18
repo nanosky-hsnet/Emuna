@@ -1,74 +1,129 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emuná Accesorios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emuná</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #FAF3E0;
+      color: #333;
+    }
+    header {
+      background-color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      max-width: 180px;
+      height: auto;
+    }
+    main {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .producto {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+    .producto img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .producto h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .producto p {
+      color: #777;
+      margin-bottom: 1rem;
+    }
+    .producto button {
+      background-color: #C96C53;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .producto button:hover {
+      background-color: #b15542;
+    }
+    footer {
+      background-color: #f2e8d5;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Emuná Accesorios</h1>
-    <p>Joyas de arcilla hechas a mano</p>
+    <img src="images/logo-emuna.png" alt="Emuná Accesorios logo">
   </header>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#productos">Tienda</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-  <section id="inicio" class="intro">
-    <h2>Bienvenid@ a Emuná</h2>
-    <p>Descubre joyas artesanales únicas, hechas con fe y dedicación.</p>
-  </section>
-  <section id="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="productos">
+
+  <main>
+    <section>
+      <h2 style="text-align:center; font-size: 2rem; margin-bottom: 1rem;">Joyas Artesanales de Arcilla</h2>
+      <p style="text-align:center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #555;">
+        En Emuná creamos accesorios únicos hechos a mano con arcilla polimérica. Cada pieza es diseñada con fe, arte y pasión.
+      </p>
+    </section>
+
+    <section class="productos">
       <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Aros+Luna" alt="Aros Luna">
-        <h3>Aros Luna</h3>
-        <p>Aros de arcilla inspirados en la luna creciente.</p>
-        <button onclick="pagar('Aros Luna', 8500)">Comprar $8.500</button>
+        <img src="images/producto1.jpg" alt="Aros Arcilla Rosa">
+        <h3>Aros Arcilla Rosa</h3>
+        <p>$6.990 CLP</p>
+        <button>Comprar</button>
       </div>
       <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Colgante+Sol" alt="Colgante Sol">
-        <h3>Colgante Sol</h3>
-        <p>Colgante dorado con formas naturales.</p>
-        <button onclick="pagar('Colgante Sol', 9900)">Comprar $9.900</button>
+        <img src="images/producto2.jpg" alt="Colgante Flor Azul">
+        <h3>Colgante Flor Azul</h3>
+        <p>$8.500 CLP</p>
+        <button>Comprar</button>
       </div>
       <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Aros+Flor" alt="Aros Flor">
-        <h3>Aros Flor</h3>
-        <p>Aros con diseño floral en tonos pastel.</p>
-        <button onclick="pagar('Aros Flor', 7200)">Comprar $7.200</button>
+        <img src="images/producto3.jpg" alt="Set Mini Aros Luna">
+        <h3>Set Mini Aros Luna</h3>
+        <p>$5.990 CLP</p>
+        <button>Comprar</button>
       </div>
       <div class="producto">
-        <img src="https://via.placeholder.com/250x250?text=Set+Naturaleza" alt="Set Naturaleza">
-        <h3>Set Naturaleza</h3>
-        <p>Conjunto de colgante + aros con diseño botánico.</p>
-        <button onclick="pagar('Set Naturaleza', 14500)">Comprar $14.500</button>
+        <img src="images/producto4.jpg" alt="Colgante Colibrí Dorado">
+        <h3>Colgante Colibrí Dorado</h3>
+        <p>$9.990 CLP</p>
+        <button>Comprar</button>
       </div>
-    </div>
-  </section>
-  <section id="nosotros">
-    <h2>Sobre Emuná</h2>
-    <p>Emuná Accesorios nace desde la pasión por lo hecho a mano y lo simbólico. Cada pieza representa una conexión auténtica con tu esencia.</p>
-  </section>
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Tu nombre" required>
-      <input type="email" placeholder="Tu email" required>
-      <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p>Email: contacto@emunaaccesorios.cl</p>
-    <p>Instagram: @emunaaccesorios</p>
-  </section>
+    </section>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Emuná Accesorios. Todos los derechos reservados.</p>
+    © 2025 Emuná Accesorios. Todos los derechos reservados.
   </footer>
-  <script src="scripts.js"></script>
 </body>
 </html>
