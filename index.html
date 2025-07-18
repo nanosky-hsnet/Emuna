@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emuná Accesorios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Emuná Accesorios</h1>
+    <p>Joyas de arcilla hechas a mano</p>
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Tienda</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <section id="inicio" class="intro">
+    <h2>Bienvenid@ a Emuná</h2>
+    <p>Descubre joyas artesanales únicas, hechas con fe y dedicación.</p>
+  </section>
+  <section id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Aros+Luna" alt="Aros Luna">
+        <h3>Aros Luna</h3>
+        <p>Aros de arcilla inspirados en la luna creciente.</p>
+        <button onclick="pagar('Aros Luna', 8500)">Comprar $8.500</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Colgante+Sol" alt="Colgante Sol">
+        <h3>Colgante Sol</h3>
+        <p>Colgante dorado con formas naturales.</p>
+        <button onclick="pagar('Colgante Sol', 9900)">Comprar $9.900</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Aros+Flor" alt="Aros Flor">
+        <h3>Aros Flor</h3>
+        <p>Aros con diseño floral en tonos pastel.</p>
+        <button onclick="pagar('Aros Flor', 7200)">Comprar $7.200</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/250x250?text=Set+Naturaleza" alt="Set Naturaleza">
+        <h3>Set Naturaleza</h3>
+        <p>Conjunto de colgante + aros con diseño botánico.</p>
+        <button onclick="pagar('Set Naturaleza', 14500)">Comprar $14.500</button>
+      </div>
+    </div>
+  </section>
+  <section id="nosotros">
+    <h2>Sobre Emuná</h2>
+    <p>Emuná Accesorios nace desde la pasión por lo hecho a mano y lo simbólico. Cada pieza representa una conexión auténtica con tu esencia.</p>
+  </section>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu email" required>
+      <textarea placeholder="Escribe tu mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p>Email: contacto@emunaaccesorios.cl</p>
+    <p>Instagram: @emunaaccesorios</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 Emuná Accesorios. Todos los derechos reservados.</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
