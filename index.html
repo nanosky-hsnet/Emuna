@@ -1,128 +1,130 @@
-
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emuná </title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emuná</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Playfair Display', serif;
-      background-color: #FAF3E0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fef9f6;
       color: #333;
     }
     header {
-      background-color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      border-bottom: 1px solid #ccc;
+      background: #d4af7f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     header img {
-      max-width: 180px;
-      height: auto;
+      height: 60px;
     }
-    main {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    nav a {
+      margin-left: 2rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
     }
     .productos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
     }
     .producto {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
     .producto:hover {
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
     .producto img {
       width: 100%;
-      border-radius: 12px;
+      display: block;
+    }
+    .producto::after {
+      content: "Ver más";
+      position: absolute;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .producto:hover::after {
+      opacity: 1;
+    }
+    .nosotros {
+      background: #fff6ec;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .nosotros h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
-    .producto h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .producto p {
-      color: #777;
-      margin-bottom: 1rem;
-    }
-    .producto button {
-      background-color: #C96C53;
-      color: #fff;
-      border: none;
-      padding: 0.7rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
+    .nosotros p {
+      max-width: 700px;
+      margin: 0 auto;
       font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    .producto button:hover {
-      background-color: #b15542;
     }
     footer {
-      background-color: #f2e8d5;
       text-align: center;
       padding: 1rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #555;
+      background: #d4af7f;
+      color: white;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/logo-emuna.png" alt="Emuná Accesorios logo">
-  </header>
-
-  <main>
-    <section>
-      <h2 style="text-align:center; font-size: 2rem; margin-bottom: 1rem;">Joyas Artesanales de Arcilla</h2>
-      <p style="text-align:center; max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #555;">
-        En Emuná creamos accesorios únicos hechos a mano con arcilla polimérica. Cada pieza es diseñada con fe, arte y pasión.
-      </p>
-    </section>
-
-    <section class="productos">
-      <div class="producto">
-        <img src="images/producto1.jpg" alt="Aros Arcilla Rosa">
-        <h3>Aros Arcilla Rosa</h3>
-        <p>$6.990 CLP</p>
-        <button>Comprar</button>
-      </div>
-      <div class="producto">
-        <img src="images/producto2.jpg" alt="Colgante Flor Azul">
-        <h3>Colgante Flor Azul</h3>
-        <p>$8.500 CLP</p>
-        <button>Comprar</button>
-      </div>
-      <div class="producto">
-        <img src="images/producto3.jpg" alt="Set Mini Aros Luna">
-        <h3>Set Mini Aros Luna</h3>
-        <p>$5.990 CLP</p>
-        <button>Comprar</button>
-      </div>
-      <div class="producto">
-        <img src="images/producto4.jpg" alt="Colgante Colibrí Dorado">
-        <h3>Colgante Colibrí Dorado</h3>
-        <p>$9.990 CLP</p>
-        <button>Comprar</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+    <img src="logo-emuna-nuevo.png" alt="Logo Emuná">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+  </header>  <section class="hero" id="inicio">
+    <h1>Emuná</h1>
+    <p>Accesorios con alma. Joyas artesanales hechas a mano con amor y arcilla.</p>
+  </section>  <section class="productos" id="productos">
+    <div class="producto"><img src="producto1.jpg" alt="Producto 1"></div>
+    <div class="producto"><img src="producto2.jpg" alt="Producto 2"></div>
+    <div class="producto"><img src="producto3.jpg" alt="Producto 3"></div>
+    <div class="producto"><img src="producto4.jpg" alt="Producto 4"></div>
+  </section>  <section class="nosotros" id="nosotros">
+    <h2>Sobre Emuná</h2>
+    <p>Emuná Accesorios nace del deseo de expresar belleza, autenticidad y fe a través de piezas únicas de arcilla. Cada creación está diseñada con pasión y dedicación, buscando realzar tu estilo con un toque artesanal y elegante.</p>
+  </section>  <footer>
     © 2025 Emuná Accesorios. Todos los derechos reservados.
   </footer>
 </body>
